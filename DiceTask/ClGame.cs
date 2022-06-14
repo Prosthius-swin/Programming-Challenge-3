@@ -23,7 +23,9 @@ namespace DiceTask
         public override int RollAllDice()
         {
             foreach(Die i in Dice)
-            Results.Add(i.Roll());
+            {
+                Results.Add(i.Roll());
+            }
             return 1;
         }
     }
