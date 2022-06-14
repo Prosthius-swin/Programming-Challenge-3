@@ -12,7 +12,8 @@ namespace DiceTask
         {
             Sides = pSides;
         }
-        public Die(){
+        public Die()
+        {
             Sides = 6;
         }
         public int Roll()
