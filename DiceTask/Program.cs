@@ -133,21 +133,5 @@ namespace DiceTask
                 Console.Write($"{i} ");
             }
         }
-
-        //Calculates the sum of all numbers stored in the list 'diceRolls' and prints to console
-        private static int DiceRollsSum(List<int> diceRolls)
-        {
-            int sumDiceRolls = diceRolls.Sum();
-            Console.WriteLine($"\nThe sum of all rolls is {sumDiceRolls}");
-            return sumDiceRolls;
-        }
-
-        //Calculates the average of numbers stored in the list 'diceRolls' and prints to console
-        private static double DiceRollsAverage(List<int> diceRolls)
-        {
-            double diceRollsAverage = diceRolls.Average();
-            Console.WriteLine($"The average of all rolls is {diceRollsAverage}\n");
-            return diceRollsAverage;
-        }
     }
 }
