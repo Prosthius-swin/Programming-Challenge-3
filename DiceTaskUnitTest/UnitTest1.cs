@@ -8,7 +8,7 @@ namespace DiceTaskUnitTest
     {
         [Theory]
         [InlineData(2, 7, 3, 11, 2, 2, 4.50)]
-        public void GetAverageTestOne(int input1,  int input2, int input3, int input4, int input5, int input6, int expected)
+        public void GetAverageTestOne(int input1,  int input2, int input3, int input4, int input5, int input6, double expected)
         {
             ClGame C = new ClGame();
 
@@ -19,7 +19,7 @@ namespace DiceTaskUnitTest
             C.Results.Add(input5);
             C.Results.Add(input6);
 
-            int total = C.GetTotal();
+            double total = C.GetTotal();
             double result = total / C.Results.Count;
             Assert.Equal(expected, result);
         }
