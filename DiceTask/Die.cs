@@ -19,7 +19,7 @@ namespace DiceTask
         public int Roll()
         {
             Random rnd = new Random();
-            int diceRolls = rnd.Next(1, Sides);
+            int diceRolls = rnd.Next(1, Sides + 1);
             return diceRolls; 
         }
     }

@@ -9,9 +9,7 @@ namespace DiceTask
     {
         static void Main(string[] args)
         {
-            //int diceRollsTotal;
             int dieSides;
-
             string menuSelection = "";
             string menu = "1. Roll dice \n2. Calculate average, total, or list all previous rolls \n3. Exit \n\n";
             string lineSeparator = "-------------------------";
@@ -56,8 +54,9 @@ namespace DiceTask
                                 Game.AddDie(dieSides);
                                 counter++;
                             }
-                            //Console.WriteLine("test");
+
                             C.RollAllDice();
+
                             foreach (int i in C.Results)
                             {
                                 Console.Write($"{i} ");
@@ -104,7 +103,10 @@ namespace DiceTask
 
                                 //List all rolls
                                 case "C":
-                                    PrintRolls(diceRolls);
+                                    foreach (int i in C.Results)
+                                    {
+                                        Console.Write($"{i} ");
+                                    }
                                     Console.WriteLine($"\n\n{lineSeparator}\n");
                                     break;
 
@@ -122,16 +124,6 @@ namespace DiceTask
                     break;
                 }
             }       
-        }
-
-        //Prints all numbers stored in the list 'diceRolls' to the console
-        private static void PrintRolls(List<int> diceRolls)
-        {
-            Console.WriteLine();
-            foreach (int i in diceRolls)
-            {
-                Console.Write($"{i} ");
-            }
         }
     }
 }
