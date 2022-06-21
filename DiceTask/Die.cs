@@ -7,19 +7,19 @@ namespace DiceTask
 {
     public class Die
     {
-        public static int Sides { get; set; }
+        public static int sides { get; set; }
         public Die(int pSides)
         {
-            Sides = pSides;
+            sides = pSides;
         }
         public Die()
         {
-            Sides = 6;
+            sides = 6;
         }
         public int Roll()
         {
             Random rnd = new Random();
-            int diceRolls = rnd.Next(1, Sides + 1);
+            int diceRolls = rnd.Next(1, sides + 1);
             return diceRolls; 
         }
     }

@@ -6,25 +6,25 @@ namespace DiceTask
 {
     public class ClGame:Game
     {
-        public string Name { get; set; }
-        public List<int> Results = new List<int>();
+        public string name { get; set; }
+        public List<int> results = new List<int>();
 
         public double GetAverage()
         {
             int total = GetTotal();
-            double average = total / Results.Count;
+            double average = total / results.Count;
             return average;
         }
         public int GetTotal()
         {
-            int total = Results.Sum();
+            int total = results.Sum();
             return total;
         }
         public override int RollAllDice()
         {
-            foreach(Die i in Dice)
+            foreach(Die i in dice)
             {
-                Results.Add(i.Roll());
+                results.Add(i.Roll());
             }
             return 1;
         }

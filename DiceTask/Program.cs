@@ -57,7 +57,7 @@ namespace DiceTask
 
                             C.RollAllDice();
 
-                            foreach (int i in C.Results)
+                            foreach (int i in C.results)
                             {
                                 Console.Write($"{i} ");
                             }
@@ -103,7 +103,7 @@ namespace DiceTask
 
                                 //List all rolls
                                 case "C":
-                                    foreach (int i in C.Results)
+                                    foreach (int i in C.results)
                                     {
                                         Console.Write($"{i} ");
                                     }
